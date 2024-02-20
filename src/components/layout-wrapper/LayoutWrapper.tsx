@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./navbar/NavBar";
 import Footer from "./footer/Footer";
-import './LayoutWrapper.scss';
+import styles from './LayoutWrapper.module.scss';
 
 const LayoutWrapper = () => {
   return (
-    <div className="layout">
+    <div className={styles.layout}>
       <Navbar />
       <div>
         <Outlet />

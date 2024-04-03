@@ -1,24 +1,60 @@
-import './Footer.scss'
+// import './Footer.scss'
+import footerImg from "../../../assets/landing-page-img/footer.webp";
 
 const Footer = () => {
   return (
-    <footer>
-    <h2 className="footer-h">About Us</h2>
+    <footer className="bg-footerBg text-white">
+      <div className="flex justify-center mt-14">
+        <div>
+          <img
+            src={footerImg}
+            alt="img"
+            className="bg-slate-400 w-[521px] h-[421px] object-fit"
+          />
+        </div>
+        <div className="flex justify-center flex-col text-center bg-slate-50">
+          <div className="mx-auto w-[67%]">
+            <h1 className="text-customBlue text-3xl font-semibold">
+              STAY IN TOUCH
+            </h1>
+            <p className="text-black my-3">
+              Subscribe to get special offers, free giveaways, and
+              once-in-a-lifetime deals.
+            </p>
+            <button className="bg-customBlue text-white p-2 rounded-md ">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
 
-    <div className="contact-info">
-      <p>70 Washington Square South, New York, NY 10012, United States</p>
-      <p>Email: rootroof.help@gmail.com</p>
-      <p>Phone: +1 1123 456 780</p>
-    </div>
+      <div className="container mx-auto text-black flex justify-start mt-16">
+        <ul className="mr-[80px]">
+          <h3 className="text-lg font-medium mb-5">Product</h3>
+          <li className="text-footerText font-medium">Privacy Policy</li>
+          <li className="text-footerText font-medium">Term of Service</li>
+          <li className="text-footerText font-medium">FAQ</li>
+        </ul>
+        <ul className="mr-[80px]">
+          <h3 className="text-lg font-medium mb-5" >Resource</h3>
+          <li className="text-footerText font-medium">Documentation</li>
+          <li className="text-footerText font-medium">Case Studies</li>
+        </ul>
+        <ul>
+          <h3 className="text-lg font-medium mb-5">Company</h3>
+          <li className="text-footerText font-medium">About Us</li>
+          <li className="text-footerText font-medium">Contact Us</li>
+        </ul>
+      </div>
 
-    <div className="icons">
-      <img src="./image/f.svg" alt="Icon 1" />
-      <img src="/image/twitter-x.svg" alt="Icon 2" />
-      <img src="/image/instagram.svg" alt="Icon 3" />
-      <img src="/image/threads.svg" alt="Icon 4" />
-    </div>
-  </footer>
-  )
-}
+      <div className="border-t-[0.5px] mt-5 border-footerBorderTop">
+        <img src="./image/f.svg" alt="Icon 1" />
+        <img src="/image/twitter-x.svg" alt="Icon 2" />
+        <img src="/image/instagram.svg" alt="Icon 3" />
+        <img src="/image/threads.svg" alt="Icon 4" />
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

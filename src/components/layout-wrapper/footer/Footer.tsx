@@ -1,4 +1,8 @@
 // import './Footer.scss'
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaPinterestP } from "react-icons/fa";
+
 import footerImg from "../../../assets/landing-page-img/footer.webp";
 
 const Footer = () => {
@@ -36,7 +40,7 @@ const Footer = () => {
           <li className="text-footerText font-medium">FAQ</li>
         </ul>
         <ul className="mr-[80px]">
-          <h3 className="text-lg font-medium mb-5" >Resource</h3>
+          <h3 className="text-lg font-medium mb-5">Resource</h3>
           <li className="text-footerText font-medium">Documentation</li>
           <li className="text-footerText font-medium">Case Studies</li>
         </ul>
@@ -47,11 +51,31 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="border-t-[0.5px] mt-5 border-footerBorderTop">
-        <img src="./image/f.svg" alt="Icon 1" />
-        <img src="/image/twitter-x.svg" alt="Icon 2" />
-        <img src="/image/instagram.svg" alt="Icon 3" />
-        <img src="/image/threads.svg" alt="Icon 4" />
+      <div className="border-t-[0.5px] mt-5 border-footerBorderTop ">
+        <div className="mx-auto container">
+          <div className="flex justify-between my-5">
+            <div className="text-footerText font-medium">
+              <h1>© Blue Diamond Jewelry™ 2021</h1>
+            </div>
+            <div className="flex">
+              <div className="bg-black rounded-full w-[25px] h-6 flex justify-center items-center mx-1">
+                <FaFacebookF size={"15"} />
+              </div>
+              <div className="bg-black rounded-full w-[25px] h-6 flex justify-center items-center mx-1">
+                <FaInstagram
+                  size={"15"}
+                  
+                />
+              </div>
+              <div className="bg-black rounded-full w-[25px] h-6 flex justify-center items-center mx-1">
+                <FaPinterestP
+                  size={"15"}
+                  
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -1,10 +1,10 @@
 import { fetchSingleProduct } from "@/api/Product";
-import axios from "axios";
+
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 
-// url
-const url = "https://fakestoreapi.com/products";
+
+
 // ts
 interface ProductStore {
   id: number;
@@ -16,6 +16,7 @@ interface ProductStore {
 const ProductDetailsPage = () => {
   const { id: productId } = useParams();
   const [product, setProducts] = useState<ProductStore>();
+  console.log(product);
   console.log(productId)
 
   useEffect(() => {

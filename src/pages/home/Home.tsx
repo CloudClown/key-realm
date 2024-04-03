@@ -14,6 +14,7 @@ interface ProductStore {
 const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState<ProductStore[]>([]);
+  console.log(products);
 
   useEffect(() => {
     fetchData();

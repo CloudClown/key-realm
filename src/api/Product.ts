@@ -1,4 +1,4 @@
-import axiosInstance from "@/services/AxiosIntance";
+import axiosInstance from "@/services/AxiosInstance";
 
 
 export const fetchProduct = () => {

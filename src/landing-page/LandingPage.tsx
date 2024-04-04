@@ -7,7 +7,7 @@ import ShopBy from "./components/ShopBy";
 
 const LandingPage = () => {
   return (
-    <>
+    <div className="font-landingPageFont">
       <Hero />
       <div className="container mx-auto">
         <ShopBy />
@@ -18,7 +18,7 @@ const LandingPage = () => {
       <CustomerReviews />
       <OurServices />
       </div>
-    </>
+    </div>
   );
 };
 

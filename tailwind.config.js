@@ -9,6 +9,9 @@ export default {
         footerText: "#53585F",
         footerBorderTop: "#929FA8",
       },
+      fontFamily: {
+        landingPageFont: ['Nunito Sans']
+      }
     },
   },
   plugins: [],

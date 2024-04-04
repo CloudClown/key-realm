@@ -4,13 +4,13 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 const NavBar = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto font-landingPageFont  ">
       <div className="flex items-center justify-between">
         <div className="">
           <h3 className="text-3xl font-medium">KEY REALM</h3>
         </div>
         <nav className="">
-          <div className="m-[1rem]">
+          <div className="m-[1rem] flex justify-center ">
             <NavLink
               className="mr-[1rem] hover:bg-slate-500 rounded-md p-2"
               to="/"

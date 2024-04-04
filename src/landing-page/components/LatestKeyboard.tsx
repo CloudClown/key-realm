@@ -26,7 +26,7 @@ const LatestKeyboard = () => {
         ))}
       </div>
       <div className="flex justify-center my-5">
-        <button className="bg-customBlue text-white p-2 rounded-md">
+        <button className="font-semibold text-customBlue p-2 rounded-md my-5 hover:bg-customBlue hover:text-white hover:font-semibold">
           VIEW GALLERY
         </button>
       </div>

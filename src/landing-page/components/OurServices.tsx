@@ -22,12 +22,12 @@ const OurServices = () => {
               alt="img"
               className="bg-slate-400 w-[521px] h-[421px] object-fit"
             />
-            <p>{service.service}</p>
+            <p className="text-customBlue text-2xl">{service.service}</p>
           </div>
         ))}
       </div>
       <div className="flex justify-center my-5">
-        <button className="bg-customBlue text-white p-2 rounded-md ">
+        <button className="font-semibold text-customBlue p-2 rounded-md my-5 hover:bg-customBlue hover:text-white hover:font-semibold">
           Learn More
         </button>
       </div>

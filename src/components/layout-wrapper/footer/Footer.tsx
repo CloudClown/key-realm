@@ -25,7 +25,7 @@ const Footer = () => {
               Subscribe to get special offers, free giveaways, and
               once-in-a-lifetime deals.
             </p>
-            <button className="bg-customBlue text-white p-2 rounded-md ">
+            <button className="font-semibold text-customBlue p-2 rounded-md my-5 hover:bg-customBlue hover:text-white hover:font-semibold">
               Subscribe
             </button>
           </div>
@@ -62,16 +62,10 @@ const Footer = () => {
                 <FaFacebookF size={"15"} />
               </div>
               <div className="bg-black rounded-full w-[25px] h-6 flex justify-center items-center mx-1">
-                <FaInstagram
-                  size={"15"}
-                  
-                />
+                <FaInstagram size={"15"} />
               </div>
               <div className="bg-black rounded-full w-[25px] h-6 flex justify-center items-center mx-1">
-                <FaPinterestP
-                  size={"15"}
-                  
-                />
+                <FaPinterestP size={"15"} />
               </div>
             </div>
           </div>

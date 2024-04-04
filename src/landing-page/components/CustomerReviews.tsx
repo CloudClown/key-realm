@@ -19,13 +19,13 @@ const CustomerReviews = () => {
     },
   ];
   return (
-    <div className="my-10">
-      <h1 className="text-customBlue text-6xl mb-5">OUR LATEST KEYBOARD</h1>
+    <div className="mb-20">
+      <h1 className="text-customBlue text-6xl mb-5">Customer reviews</h1>
       <div className=" text-center flex justify-start gap-4">
         {customerReviews.map((customerReview) => (
           <div
             key={customerReview.id}
-            className="text-center flex flex-col items-center border p-3"
+            className="text-center flex flex-col items-center border p-10"
           >
             <div className="flex justify-start w-full mb-4">
               <img src={Quotation} alt="quotation" />

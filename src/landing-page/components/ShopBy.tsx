@@ -29,7 +29,7 @@ const ShopBy = () => {
               // style={{ height: "200px" }} // Set specific height here
               className="bg-slate-400 w-[321px] h-[221px] object-fit"
             />
-            <p>{keyboardLayout.type}</p>
+            <p className="text-customBlue text-2xl">{keyboardLayout.type}</p>
           </div>
         ))}
       </div>

@@ -7,7 +7,7 @@ const NavBar = () => {
     <div className="container mx-auto font-landingPageFont  ">
       <div className="flex items-center justify-between">
         <div className="">
-          <h3 className="text-3xl font-medium">KEY REALM</h3>
+          <h3 className="text-3xl font-medium text-logoColor">KEY REALM</h3>
         </div>
         <nav className="">
           <div className="m-[1rem] flex justify-center ">

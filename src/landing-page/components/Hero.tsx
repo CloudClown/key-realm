@@ -14,20 +14,32 @@ const Hero = () => {
     speed: 500,
     autoplaySpeed: 3000,
     cssEase: "linear",
-    fade: true
+    fade: true,
   };
 
   return (
     <div className="flex flex-col overflow-hidden">
       <Slider {...settings}>
         <div>
-          <img className="h-screen w-screen object-cover" src={keyboardOne} alt="img" />
+          <img
+            className="h-screen w-screen object-cover blur-sm"
+            src={keyboardOne}
+            alt="img"
+          />
         </div>
         <div>
-          <img className="h-screen w-screen object-cover" src={keyboardTwo} alt="img" />
+          <img
+            className="h-screen w-screen object-cover"
+            src={keyboardTwo}
+            alt="img"
+          />
         </div>
         <div>
-          <img className="h-screen w-screen object-cover" src={keyboardThree} alt="img" />
+          <img
+            className="h-screen w-screen object-cover"
+            src={keyboardThree}
+            alt="img"
+          />
         </div>
       </Slider>
     </div>

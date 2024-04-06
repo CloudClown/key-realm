@@ -8,6 +8,7 @@ export default {
         footerBg: "#B8E0EF",
         footerText: "#53585F",
         footerBorderTop: "#929FA8",
+        logoColor: "#0D5EBA",
       },
       fontFamily: {
         landingPageFont: ['Nunito Sans']

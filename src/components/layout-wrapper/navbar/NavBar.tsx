@@ -7,7 +7,9 @@ const NavBar = () => {
     <div className="container mx-auto font-landingPageFont  ">
       <div className="flex items-center justify-between">
         <div className="">
-          <h3 className="text-3xl font-medium text-logoColor">KEY REALM</h3>
+          <NavLink to="/">
+            <h3 className="text-3xl font-medium text-logoColor">KEY REALM</h3>
+          </NavLink>
         </div>
         <nav className="">
           <div className="m-[1rem] flex justify-center ">
@@ -25,9 +27,9 @@ const NavBar = () => {
             </NavLink>
             <NavLink
               className="mr-[1rem] hover:bg-slate-500 rounded-md p-2"
-              to="portfolio"
+              to="product"
             >
-              Portfolio
+              Product
             </NavLink>
             <NavLink
               className="mr-[1rem] hover:bg-slate-500 rounded-md p-2"

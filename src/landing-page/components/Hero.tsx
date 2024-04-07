@@ -18,11 +18,11 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden container mx-auto">
       <Slider {...settings}>
         <div>
           <img
-            className="h-screen w-screen object-cover blur-sm"
+            className="h-screen w-screen object-cover"
             src={keyboardOne}
             alt="img"
           />

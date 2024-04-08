@@ -79,3 +79,27 @@ export const brand = [
   { brandName: "Corsair" },
   { brandName: "Razer" },
 ];
+
+export const type = [{ type: "Mechanical" }, { type: "Membrane" }];
+
+export const size = [
+  { size: "Full-size" },
+  { size: "Tenkeyless" },
+  { size: "Membrane" },
+  { size: "75%" },
+  { size: "65%" },
+  { size: "60%" },
+  { size: "40%" },
+];
+
+export const connectivity = [
+  { connectivity: "Wired" },
+  { connectivity: "Wireless" },
+  { connectivity: "Bluetooth" },
+];
+
+export const switchOfKeyBoard = [
+  { switch: "CherryMX" },
+  { switch: "Razer" },
+  { switch: "Gateron" },
+];

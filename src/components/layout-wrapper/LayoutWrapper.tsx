@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./navbar/NavBar";
 import Footer from "./footer/Footer";
-import styles from './LayoutWrapper.module.scss';
+import styles from "./LayoutWrapper.module.scss";
 
 const LayoutWrapper = () => {
   return (
@@ -9,7 +9,7 @@ const LayoutWrapper = () => {
       <Navbar />
       <div>
         <Outlet />
-      </div>          
+      </div>
       <Footer />
     </div>
   );

@@ -1,8 +1,9 @@
+import { NavLink } from "react-router-dom";
 
 const ProductGridHeader = () => {
   return (
     <div>
-      <p>Home / Products</p>
+      <p><NavLink to="/">Home</NavLink> / Products</p>
       <h1 className="my-5">Keyboard</h1>
       <form>
         <div className=" inline-block w-[190px]">

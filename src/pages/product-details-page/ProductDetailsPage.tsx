@@ -1,7 +1,13 @@
+import PhotoGallery from "@/components/product-details/PhotoGallery";
+import ProductDescription from "@/components/product-details/ProductDescription";
+import ProductSummary from "@/components/product-details/ProductSummary";
+
 const ProductDetailsPage = () => {
   return (
     <div>
-      <h1>Product Details Page</h1>
+      <PhotoGallery />
+      <ProductSummary />
+      <ProductDescription />
     </div>
   );
 };

@@ -4,10 +4,12 @@ import ProductSummary from "@/components/product-details/ProductSummary";
 
 const ProductDetailsPage = () => {
   return (
-    <div>
+    <div className="grid grid-cols-2 gap-4">
       <PhotoGallery />
       <ProductSummary />
-      <ProductDescription />
+      <div className="col-span-2">
+        <ProductDescription />
+      </div>
     </div>
   );
 };

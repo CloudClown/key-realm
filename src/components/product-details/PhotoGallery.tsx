@@ -1,7 +1,8 @@
 
 const PhotoGallery = () => {
   return (
-    <div>PhotoGallery</div>
+    <div className="w-[100%] bg-slate-500">
+      PhotoGallery</div>
   )
 }
 

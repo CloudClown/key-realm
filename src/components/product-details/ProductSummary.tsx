@@ -1,7 +1,7 @@
 
 const ProductSummary = () => {
   return (
-    <div>ProductSummary</div>
+    <div className="w-[100%] bg-zinc-800">ProductSummary</div>
   )
 }
 

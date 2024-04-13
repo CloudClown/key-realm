@@ -1,7 +1,7 @@
 
 const ProductDescription = () => {
   return (
-    <div>ProductDescription</div>
+    <div className="w-[100%] bg-slate-900">ProductDescription</div>
   )
 }
 

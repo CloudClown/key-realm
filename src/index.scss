@@ -17,3 +17,24 @@
     @apply text-5xl;
   }
 }
+
+// Hide the default scrollbar
+::-webkit-scrollbar {
+  width: 12px; // Width of the scrollbar
+}
+
+// Track
+::-webkit-scrollbar-track {
+  background: #f1f1f1; // Color of the track
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+  background: #7e4747; // Color of the handle
+  border-radius: 6px;
+}
+
+// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: #555; // Color of the handle on hover
+}

@@ -22,7 +22,7 @@ const PhotoGallery = () => {
       );
     },
     dots: true,
-    dotsClass: "slick-dots", // Remove the slick-thumb class
+    dotsClass: "slick-dots",
     infinite: true,
     speed: 500,
     slidesToShow: 1,

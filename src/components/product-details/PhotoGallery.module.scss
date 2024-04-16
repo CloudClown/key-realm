@@ -1,0 +1,36 @@
+.slick-slider,
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide > div {
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-dots {
+  position: unset;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.slick-dots li {
+  background: none;
+  width: 132px;
+  height: auto;
+}
+
+.slick-dots li button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,39 +1,27 @@
-// PhotoGallery.scss
+// // Remove default styles of react-slick
+// .slick-slider,
+// .slick-list,
+// .slick-track,
+// .slick-slide,
+// .slick-slide > div {
+//   margin: 0 auto;
+//   padding: 0;
+//   width: 80%;
+// }
 
-// Remove default styles of react-slick
-.slick-slider,
-.slick-list,
-.slick-track,
-.slick-slide,
-.slick-slide > div {
-  margin: 0;
-  padding: 0;
-}
+// .slick-track {
+//   display: flex;
+//   align-items: center;
+// }
 
-// Define custom styles for the custom paging images
-.slick-dots {
-  display: flex;
-  justify-content: center;
+// // Custom styles to override React Slick's default styles
+// .slick-dots {
+//   position: unset;
+// }
 
-  // Custom styles for the dots
-  li {
-    margin: 0 4px;
-
-    button {
-      padding: 0;
-      border: none;
-      background: transparent;
-
-      img {
-        width: 64px; // Adjust the width as needed
-        height: auto;
-        border-radius: 8px; // Adjust the border radius as needed
-      }
-    }
-  }
-}
-
-// Custom styles to override React Slick's default styles
-.slick-dots li button img {
-  width: 32px !important; // Adjust the width as needed
-}
+// .slick-dots li button img {
+//   width: auto !important;
+// }
+// .slick-dots li {
+//   width: auto !important;
+// }

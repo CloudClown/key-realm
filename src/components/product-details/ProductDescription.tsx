@@ -13,36 +13,56 @@ const ProductDescription = () => {
   const [addInfo, setAddInfo] = useState(false);
   const [reviews, setReviews] = useState(false);
 
+  const [activeBtn, setActive] = useState(1);
+
   const handleClick = (bId: number) => {
     if (bId === 1) {
       setDescription(!description);
       setAddInfo(false);
       setReviews(false);
+      // btn style
+      setActive(bId);
     } else if (bId === 2) {
       setAddInfo(!addInfo);
       setDescription(false);
       setReviews(false);
+      // btn style
+      setActive(bId);
     } else if (bId === 3) {
       setReviews(!reviews);
       setAddInfo(false);
       setDescription(false);
+      // btn style
+      setActive(bId);
     } else {
       return null;
     }
   };
 
+
+  // transition-all make the content push to down 
   return (
     <div className="bg-gray-400">
-      <div className="container mx-auto mt-8">
-        {buttonObj.map((buttonData) => (
-          <button
-            key={buttonData.id}
-            className={`p-1 text-customBlue ${buttonData.id === 2 ? 'mx-5' : ''} ${buttonData.id === buttonData.id ? 'border-t-4 border-customBlue' : ''} mt-5 mx-4`}
-            onClick={() => handleClick(buttonData.id)}
-          >
-            {buttonData.bName}
-          </button>
-        ))}
+      <div className="container mx-auto ">
+
+        <div className="bg-yellow-100 ">
+          {buttonObj.map((buttonData) => (
+            <button
+              key={buttonData.id}
+              className={`p-1 my-6 text-customBlue ${
+                buttonData.id === 2 ? "mx-5" : ""
+              } ${
+                activeBtn === buttonData.id
+                  ? "border-t-4 border-customBlue transition-colors"
+                  : ""
+              } mt-5 mx-4`}
+              onClick={() => handleClick(buttonData.id)}
+            >
+              {buttonData.bName}
+              
+            </button>
+          ))}
+        </div>
 
         <div className="bg-gray-500">
           {description && <Description />}

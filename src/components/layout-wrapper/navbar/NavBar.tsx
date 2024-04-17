@@ -2,11 +2,18 @@ import "./NavBar.scss";
 import { NavLink } from "react-router-dom";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import SideCart from "@/components/SideCart";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [cartSideBar, setCartSideBar] = useState(false);
+
+  const handleCart = () => {
+    console.log("clicked");
+    setCartSideBar(!cartSideBar);
+  };
+
   return (
     <div className="container mx-auto font-landingPageFont  ">
-      <SideCart />
       <div className="flex items-center justify-between">
         <div className="">
           <NavLink to="/">
@@ -39,12 +46,19 @@ const NavBar = () => {
             >
               Contact
             </NavLink>
-            <NavLink to={""} className="p-2">
+            {/* <NavLink to={""} className="p-2"> */}
+            <button onClick={handleCart} className="p-2">
               <HiOutlineShoppingBag size={30} />
-            </NavLink>
+            </button>
+            {/* </NavLink> */}
           </div>
         </nav>
       </div>
+      {cartSideBar &&
+       <div className="transition-transform ease-in-out duration-300">
+         <SideCart isOpen={cartSideBar} isClose={()=>setCartSideBar(!cartSideBar)}/>
+       </div>
+       }
     </div>
   );
 };

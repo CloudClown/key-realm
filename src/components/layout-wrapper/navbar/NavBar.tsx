@@ -13,7 +13,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="container mx-auto font-landingPageFont  ">
+    <div className="container mx-auto font-landingPageFont">
       <div className="flex items-center justify-between">
         <div className="">
           <NavLink to="/">
@@ -54,11 +54,13 @@ const NavBar = () => {
           </div>
         </nav>
       </div>
-      {cartSideBar &&
-       <div className="transition-transform ease-in-out duration-300">
-         <SideCart isOpen={cartSideBar} isClose={()=>setCartSideBar(!cartSideBar)}/>
-       </div>
-       }
+      {cartSideBar && (
+        <div className="transition-transform ease-in-out duration-300"></div>
+      )}
+      <SideCart
+        isOpen={cartSideBar}
+        onClose={() => setCartSideBar(!cartSideBar)}
+      />
     </div>
   );
 };

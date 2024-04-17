@@ -4,9 +4,13 @@ import Footer from "./footer/Footer";
 import styles from "./LayoutWrapper.module.scss";
 
 const LayoutWrapper = () => {
+
+
+
   return (
     <div className={styles.layout}>
-      <Navbar />
+      
+      <Navbar  />
       <div>
         <Outlet />
       </div>

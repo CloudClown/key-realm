@@ -1,10 +1,12 @@
 import "./NavBar.scss";
 import { NavLink } from "react-router-dom";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import SideCart from "@/components/SideCart";
 
 const NavBar = () => {
   return (
     <div className="container mx-auto font-landingPageFont  ">
+      <SideCart />
       <div className="flex items-center justify-between">
         <div className="">
           <NavLink to="/">

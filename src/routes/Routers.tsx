@@ -5,6 +5,7 @@ import { Home } from "@/pages/home";
 import ProductDetailsPage from "@/pages/product-details-page/ProductDetailsPage";
 import LandingPage from "@/landing-page/LandingPage";
 import Product from "@/pages/product/Product";
+import Cart from "@/components/cart/Cart";
 
 const Routers = () => {
   return (
@@ -16,6 +17,7 @@ const Routers = () => {
         <Route path="/product" element={<Product />} />
         {/* <Route path="/product/:id" element={<ProductDetailsPage />} /> */}
         <Route path="/productDetails" element={<ProductDetailsPage />} />
+        <Route path="/cart" element={<Cart />} />
       </Route>
     </Routes>
   );

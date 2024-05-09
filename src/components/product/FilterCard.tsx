@@ -11,7 +11,7 @@ import HotSwapp from "./HotSwapp";
 import Switch from "./Switch";
 
 const FilterCard = () => {
-  console.log(brands);
+  // console.log(brands);
 
   return (
     <div className="h-auto">

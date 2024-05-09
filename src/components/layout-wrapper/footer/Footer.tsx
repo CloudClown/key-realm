@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="mx-auto container">
           <div className="flex justify-between my-5">
             <div className="text-footerText font-medium">
-              <p>© Blue Diamond Jewelry™ 2021</p>
+              <p>© Key Realm™ 2024</p>
             </div>
             <div className="flex">
               <div className="bg-black rounded-full w-[25px] h-6 flex justify-center items-center mx-1">

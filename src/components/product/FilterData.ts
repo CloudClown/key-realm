@@ -15,23 +15,6 @@ export const brands: BrandsName[] = [
   { brandName: "Logitech" },
   { brandName: "Corsair" },
   { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
-  { brandName: "Razer" },
 ];
 
 export interface Size {

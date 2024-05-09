@@ -2,7 +2,7 @@ import Axios from "axios"; // Import Axios as default
 
 const AxiosInstance = () => {
   const axiosInstance = Axios.create({
-    baseURL: "https://fakestoreapi.com/",
+    baseURL: "http://localhost:5000/api/",
     // withCredentials: true,
   });
 

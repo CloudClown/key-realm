@@ -2,7 +2,7 @@
 import "./Home.scss";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchProduct } from "@/api/Product";
+import { fetchProduct } from "@/api/ProductApi";
 
 interface ProductStore {
   id: number;

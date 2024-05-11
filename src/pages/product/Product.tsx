@@ -6,9 +6,9 @@ import { useKeyboardContext } from "@/context/setContext";
 import { useEffect } from "react";
 
 const Product = () => {
-  const { fetchKeyboards, keyboards } = useKeyboardContext();
+  const { fetchKeyboards } = useKeyboardContext();
 
-  console.log("keyboards", keyboards);
+  // console.log("keyboards", keyboards);
 
   useEffect(() => {
     fetchKeyboards();

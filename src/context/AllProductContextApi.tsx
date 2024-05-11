@@ -2,6 +2,7 @@ import React, { createContext, useState, ReactNode } from "react";
 import { fetchProduct } from "@/api/ProductApi";
 
 export interface KeyboardStructure {
+  _id: string;
   brand: string;
   keyboard_name: string;
   rating: number;

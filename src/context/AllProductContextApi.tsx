@@ -1,15 +1,6 @@
 import React, { createContext, useState, ReactNode } from "react";
 import { fetchProduct, fetchSingleProduct } from "@/api/ProductApi";
-
-export interface KeyboardStructure {
-  _id: string;
-  brand: string;
-  keyboard_name: string;
-  rating: number;
-  size: string;
-  type: string;
-  switch_type: string;
-}
+import { KeyboardStructure } from "@/models/keyboard.model";
 
 export interface KeyboardsContextType {
   keyboards: KeyboardStructure[] | null;
@@ -37,10 +28,11 @@ export const KeyBoardProvider: React.FC<{ children: ReactNode }> = ({ children }
     }
   };
  
-  const fetchSingleKeyboard = async (id: string) => {
+  const fetchSingleKeyboard = async (keyboard_id: string) => {
     try {
-      const response = await fetchSingleProduct(id);
-      setKeyboard(response.data.keyboards.id);
+      const response = await fetchSingleProduct(keyboard_id);
+      console.log(response)
+      setKeyboard(response.data.keyboard);
     } catch (err) {
       console.log(err);
     }

@@ -7,16 +7,16 @@ import { useParams } from "react-router-dom";
 
 
 const ProductDetailsPage = () => {
-  const { id } = useParams();
-  console.log(id);
+  const { keyboard_id } = useParams();
 
   const { fetchSingleKeyboard, keyboard } = useKeyboardContext();
 
+
   useEffect(() => {
-    if (id) {
-      fetchSingleKeyboard(id)
+    if (keyboard_id) {
+      fetchSingleKeyboard(keyboard_id)
     }
-  }, [])
+  }, [keyboard_id])
 
   return (
     <div className="grid grid-cols-2 gap-4">

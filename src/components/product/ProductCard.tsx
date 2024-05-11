@@ -11,8 +11,8 @@ const ProductCard = ({ keyboard }: IProductCardsProps) => {
   console.log(keyboard, "data of produt grid");
   const navigate = useNavigate();
 
-  const productClick = (id: string) => {
-    navigate(`/productDetails/${id}`);
+  const productClick = (keyboard_id: string) => {
+    navigate(`/productDetails/${keyboard_id}`);
   }
 
   return (

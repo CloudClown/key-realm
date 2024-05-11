@@ -6,5 +6,5 @@ export const fetchProduct = () => {
   };
   
 export const fetchSingleProduct = (id: string) => {
-    return axiosInstance.get(`/products/${id}`);
+    return axiosInstance.get(`/keyboard/${id}`);
 }

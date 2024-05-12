@@ -7,23 +7,23 @@ import { useParams } from "react-router-dom";
 
 
 const ProductDetailsPage = () => {
-  const { keyboard_id } = useParams();
+  const { keyboard_slug } = useParams();
 
   const { fetchSingleKeyboard, keyboard } = useKeyboardContext();
-
+console.log('productdetailspage', keyboard);
 
   useEffect(() => {
-    if (keyboard_id) {
-      fetchSingleKeyboard(keyboard_id)
+    if (keyboard_slug) {
+      fetchSingleKeyboard(keyboard_slug)
     }
-  }, [keyboard_id])
+  }, [keyboard_slug])
 
   return (
     <div className="grid grid-cols-2 gap-4">
-      <PhotoGallery />
-      <ProductSummary />
+      <PhotoGallery/>
+      <ProductSummary keyboard={keyboard || null}/>
       <div className="col-span-2">
-        <ProductDescription />
+        <ProductDescription keyboard={keyboard  || null}/>
       </div>
     </div>
   );

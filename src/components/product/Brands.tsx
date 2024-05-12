@@ -6,7 +6,7 @@ interface Props {
 
 const Brand = ({ brands }: Props) => {
   return (
-    <div className="h-60 overflow-y-scroll">
+    <div className="h-30 overflow-y-scroll">
       <h3 className="font-bold text-lg mb-2">Brand</h3>
       <div className="ml-3">
         {brands.map((brand) => (

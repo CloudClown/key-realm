@@ -1,8 +1,18 @@
+import { KeyboardStructure } from "@/models/keyboard.model";
 
-const Description = () => {
-  return (
-    <div>Description</div>
-  )
+interface IKeyboardDescriptionProps {
+  keyboard: KeyboardStructure | null;
 }
 
-export default Description
+const Description = ({ keyboard }: IKeyboardDescriptionProps) => {
+  return (
+    <div>
+      <h1>Description</h1>
+      <h3>
+        {keyboard?.brand}
+      </h3>
+    </div>
+  );
+};
+
+export default Description;

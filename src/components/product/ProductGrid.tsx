@@ -6,7 +6,7 @@ import { useKeyboardContext } from "@/context/setContext";
 
 const ProductGrid = () => {
   const { keyboards } = useKeyboardContext();
-  console.log("data from product grid- ", keyboards);
+  // console.log("data from product grid- ", keyboards);
 
   return (
     <div className="w-screen font-landingPageFont">

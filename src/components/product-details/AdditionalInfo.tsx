@@ -1,3 +1,6 @@
+interface IKeyboardDescriptionProps {
+  keyboard: KeyboardStructure | null;
+}
 
 const AdditionalInfo = () => {
   return (

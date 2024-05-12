@@ -2,8 +2,17 @@ import { useState } from "react";
 import Description from "./Description";
 import AdditionalInfo from "./AdditionalInfo";
 import Reviews from "./Reviews";
+import { KeyboardStructure } from "@/models/keyboard.model";
 
-const ProductDescription = () => {
+
+interface IKeyboardDescriptionProps {
+  keyboard: KeyboardStructure | null;
+}
+
+const ProductDescription = ({keyboard}: IKeyboardDescriptionProps) => {
+
+  // console.log('product description ', keyboard)
+
   const buttonObj = [
     { id: 1, bName: "Description" },
     { id: 2, bName: "Additional Information" },
@@ -65,9 +74,9 @@ const ProductDescription = () => {
         </div>
 
         <div className="bg-gray-500">
-          {description && <Description />}
-          {addInfo && <AdditionalInfo />}
-          {reviews && <Reviews />}
+          {description && <Description keyboard={keyboard || null}/>}
+          {addInfo && <AdditionalInfo keyboard={keyboard || null}/>}
+          {reviews && <Reviews keyboard={keyboard || null}/>}
         </div>
       </div>
     </div>

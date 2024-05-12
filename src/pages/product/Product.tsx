@@ -1,6 +1,5 @@
 import FilterCard from "@/components/product/FilterCard";
 import ProductGrid from "@/components/product/ProductGrid";
-// import { KeyboardStructure } from "@/context/AllProductContextApi";
 import { useKeyboardContext } from "@/context/setContext";
 
 import { useEffect } from "react";

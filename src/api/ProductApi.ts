@@ -5,6 +5,6 @@ export const fetchProduct = () => {
     return axiosInstance.get("keyboard");
   };
   
-export const fetchSingleProduct = (id: string) => {
-    return axiosInstance.get(`/keyboard/${id}`);
+export const fetchSingleProduct = (keyboard_slug: string) => {
+    return axiosInstance.get(`/keyboard/${keyboard_slug}`);
 }

@@ -11,15 +11,21 @@ interface IProductCardsProps {
 
 const ProductCard = ({ keyboard }: IProductCardsProps) => {
   const navigate = useNavigate();
-  const { cart ,setCart } = useCartContext();
-  console.log(cart)
+  const { cart ,addToCart } = useCartContext();
+  console.log('i love you: ',cart)
 
   const productClick = (keyboard_slug: string) => {
     navigate(`/productDetails/${keyboard_slug}`);
   };
 
   const addCart = (keyboard: KeyboardStructure | null) => {
-    setCart(keyboard)
+    const product = {
+      ...keyboard,
+      quantity: 1,
+    }
+
+    addToCart(product)
+
   }
 
   return (

@@ -2,7 +2,7 @@ export interface KeyboardStructure {
     _id: string;
     brand: string;
     keyboard_name: string;
-    price: string;
+    price: number;
     rating: number;
     size: string;
     type: string;

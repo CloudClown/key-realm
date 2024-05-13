@@ -6,8 +6,8 @@ export interface IProduct extends KeyboardStructure {
 
 export interface ICart {
     products: IProduct[];
-    // total_price: number;
-    total_price: string;
+    total_price: number | string;
+    // total_price: string;
 }
 
 

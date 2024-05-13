@@ -1,10 +1,11 @@
-import { ICart } from "@/models/cart.model";
+import { ICart, IProduct } from "@/models/cart.model";
+import { KeyboardStructure } from "@/models/keyboard.model";
 import { ReactNode, createContext, useState } from "react";
 // create context interface
 
-
 export interface CartContextType {
-  cart: ICart[] | null;
+  cart: ICart | null;
+  addToCart: (product: KeyboardStructure | null) => void;
   setCart: (value: React.SetStateAction<ICart[] | null>) => void;
 }
 
@@ -15,15 +16,47 @@ export const CartContext = createContext<CartContextType | undefined>(
 export const CartProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [cart, setCart] = useState<ICart[] | null>(null);
+  const [cart, setCart] = useState<ICart | null>({
+    products: [],
+    total_price: 0,
+  });
+
+  const addToCart = (product: IProduct) => {
+    if (!cart) return;
+
+    const existingProduct = cart.products.findIndex(
+      (p) => p._id === product._id
+    );
+    console.log(existingProduct);
+
+    if (existingProduct === -1) {
+      const updatedCart = {
+        ...cart,
+        products: [...cart.products, product],
+        total_price:
+          (cart.total_price as number) + product.price * product.quantity,
+      };
+      setCart(updatedCart);
+    } else {
+      const updatedProducts = [...cart.products];
+      updatedProducts[existingProduct].quantity += product.quantity;
+
+      const updatedCart = {
+        ...cart,
+        products: updatedProducts,
+        total_price:
+          (cart.total_price as number) + product.price * product.quantity,
+      };
+      setCart(updatedCart);
+    }
+  };
 
   return (
-    <CartContext.Provider value={{ cart, setCart }}>
+    <CartContext.Provider value={{ cart, addToCart }}>
       {children}
     </CartContext.Provider>
   );
 };
-
 
 /*
 Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components

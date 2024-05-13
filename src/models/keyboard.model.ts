@@ -9,4 +9,5 @@ export interface KeyboardStructure {
     switch_type: string;
     keyboard_slug: string;
     keyboard_image: string;
+    description: string;
   }

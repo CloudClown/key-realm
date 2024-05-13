@@ -12,7 +12,7 @@ const ProductGrid = () => {
     <div className="w-screen font-landingPageFont">
       <ProductGridHeader />
 
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 flex-wrap">
         {keyboards?.map((keyboard) => {
           return <ProductCard keyboard={keyboard} key={keyboard?._id} />;
         })}

@@ -3,7 +3,7 @@ import keyboardImg from "../../assets/landing-page-img/img-1.webp";
 import { GoStarFill } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 import { useCartContext } from "@/context/setContext";
-import { ICart } from "@/models/cart.model";
+// import { ICart } from "@/models/cart.model";
 
 interface IProductCardsProps {
   keyboard: KeyboardStructure | null;
@@ -62,7 +62,7 @@ export default ProductCard;
 
 /* 
 here what made first mistake is, i use setCart direct.
-that time it throw me an error of type not matchi of iCart
+that time it throw me an error of type not match of iCart
 so gpt gave a solution that i should crate a addCart function and now i don't know what to 
 do with this function
 if i set directly to cart then its throwing error of type not assignable 

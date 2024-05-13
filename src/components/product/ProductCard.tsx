@@ -2,6 +2,8 @@ import { KeyboardStructure } from "@/models/keyboard.model";
 import keyboardImg from "../../assets/landing-page-img/img-1.webp";
 import { GoStarFill } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
+import { useCartContext } from "@/context/setContext";
+import { ICart } from "@/models/cart.model";
 
 interface IProductCardsProps {
   keyboard: KeyboardStructure | null;
@@ -9,10 +11,16 @@ interface IProductCardsProps {
 
 const ProductCard = ({ keyboard }: IProductCardsProps) => {
   const navigate = useNavigate();
+  const { cart ,setCart } = useCartContext();
+  console.log(cart)
 
   const productClick = (keyboard_slug: string) => {
     navigate(`/productDetails/${keyboard_slug}`);
   };
+
+  const addCart = (keyboard: KeyboardStructure | null) => {
+    setCart(keyboard)
+  }
 
   return (
     <div className="w-[350px] mt-16 bg-slate-300  rounded-lg">
@@ -39,7 +47,7 @@ const ProductCard = ({ keyboard }: IProductCardsProps) => {
         </div>
         {/* </Link> */}
         <button
-          onClick={() => console.log("btn clicked")}
+          onClick={() => addCart(keyboard)}
           className="p-3 text-customBlue border border-customBlue transition-all duration-300 ease-in-out hover:bg-customBlue hover:text-white"
         >
           Add To Cart
@@ -50,3 +58,12 @@ const ProductCard = ({ keyboard }: IProductCardsProps) => {
 };
 
 export default ProductCard;
+
+
+/* 
+here what made first mistake is, i use setCart direct.
+that time it throw me an error of type not matchi of iCart
+so gpt gave a solution that i should crate a addCart function and now i don't know what to 
+do with this function
+if i set directly to cart then its throwing error of type not assignable 
+*/

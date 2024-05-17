@@ -11,8 +11,7 @@ interface IProductCardsProps {
 
 const ProductCard = ({ keyboard }: IProductCardsProps) => {
   const navigate = useNavigate();
-  const { cart ,addToCart } = useCartContext();
-  console.log('i love you: ',cart)
+  const { addToCart } = useCartContext();
 
   const productClick = (keyboard_slug: string) => {
     navigate(`/productDetails/${keyboard_slug}`);

@@ -22,12 +22,14 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
   });
 
   const addToCart = (product: IProduct) => {
+    // if cart is empty then return
     if (!cart) return;
 
+    // finding the duplicate product index
     const existingProduct = cart.products.findIndex(
       (p) => p._id === product._id
     );
-    console.log(existingProduct);
+    
 
     if (existingProduct === -1) {
       const updatedCart = {
@@ -39,6 +41,9 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
       setCart(updatedCart);
     } else {
       const updatedProducts = [...cart.products];
+    console.log(updatedProducts, 'update products for duplicate product');
+
+      console.log(existingProduct, 'index');
       updatedProducts[existingProduct].quantity += product.quantity;
 
       const updatedCart = {
@@ -64,3 +69,5 @@ in this context file there was an error fast refresh
 what o found is when we exporting CartContext we should keep the first letter 
 capital or else it will throw error
 */
+
+// found a way to edit in chrome dev tool that wil import code in your project

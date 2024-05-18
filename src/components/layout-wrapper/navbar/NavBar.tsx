@@ -1,11 +1,11 @@
 import "./NavBar.scss";
 import { NavLink } from "react-router-dom";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { useCartContext } from "@/context/setContext";
 // import SideCart from "@/components/SideCart";
 // import { useState } from "react";
 
 interface Props {
-
   onClose: () => void; // Rename isClose to onClose for clarity
 }
 
@@ -16,6 +16,8 @@ const NavBar = ({ onClose }: Props) => {
   //   console.log("clicked");
   //   setCartSideBar(!cartSideBar);
   // };
+
+  const { lengthOfCart } = useCartContext();
 
   return (
     <div className="container mx-auto font-landingPageFont">
@@ -52,9 +54,15 @@ const NavBar = ({ onClose }: Props) => {
               Contact
             </NavLink>
             {/* <NavLink to={""} className="p-2"> */}
-            <button onClick={onClose} className="p-2">
-              <HiOutlineShoppingBag size={30} />
-            </button>
+            <div className="relative">
+              <span className="inline-flex bg-slate-500 h-5 w-5 rounded-full items-center justify-center absolute right-0">
+                {lengthOfCart}
+              </span>
+
+              <button onClick={onClose} className="p-2">
+                <HiOutlineShoppingBag size={30} />
+              </button>
+            </div>
             {/* </NavLink> */}
           </div>
         </nav>

@@ -34,6 +34,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
       (p) => p._id === product._id
     );
 
+    // product does not exist insert in to the cart / 
     if (existingProduct === -1) {
       const updatedCart = {
         ...cart,
@@ -43,6 +44,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
       };
       setCart(updatedCart);
     } else {
+      // if product already exists increment the product quantity 
       const updatedProducts = [...cart.products];
       console.log(updatedProducts, "update products for duplicate product");
 
@@ -62,12 +64,8 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
 
   console.log(cart);
 
-  // setLengthOfCart(cart?.products?.length)
-  // console.log(cart, '- object')
-  // console.log(lengthOfCart, "- initial state");
-  
-  // console.log(lengthOfCart, "-after updating state");
 
+  // if the cart is updated then this will call and update the cart number
   useEffect(() => {
     setLengthOfCart(cart?.products.length);
   },[cart])

@@ -5,25 +5,23 @@ import { useKeyboardContext } from "@/context/setContext";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-
 const ProductDetailsPage = () => {
   const { keyboard_slug } = useParams();
 
   const { fetchSingleKeyboard, keyboard } = useKeyboardContext();
-console.log('productdetailspage', keyboard);
 
   useEffect(() => {
     if (keyboard_slug) {
-      fetchSingleKeyboard(keyboard_slug)
+      fetchSingleKeyboard(keyboard_slug);
     }
-  }, [keyboard_slug])
+  }, [keyboard_slug]);
 
   return (
     <div className="grid grid-cols-2 gap-4">
-      <PhotoGallery/>
-      <ProductSummary keyboard={keyboard || null}/>
+      <PhotoGallery />
+      <ProductSummary keyboard={keyboard || null} />
       <div className="col-span-2">
-        <ProductDescription keyboard={keyboard  || null}/>
+        <ProductDescription keyboard={keyboard || null} />
       </div>
     </div>
   );

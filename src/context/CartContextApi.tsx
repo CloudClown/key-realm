@@ -76,6 +76,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
     }
   };
 
+  console.log(cart)
   // if the cart is updated then this will call and update the cart number
   useEffect(() => {
     setLengthOfCart(cart?.products.length);

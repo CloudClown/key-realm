@@ -11,17 +11,15 @@ const ProductSummary = ({ keyboard }: IKeyboard) => {
 
   const [quantity, setQuantity] = useState<number>(1);
 
-  const handleSubmit = (keyboard: KeyboardStructure | null) => {
-    const addCart = (keyboard: KeyboardStructure | null) => {
-      const product = {
-        ...keyboard,
-        quantity: quantity, // Use the state quantity
-      };
+  console.log(quantity);
 
-      addToCart(product);
+  const handleSubmit = (keyboard: KeyboardStructure | null) => {
+    const product = {
+      ...keyboard,
+      quantity: quantity, // Use the state quantity
     };
 
-    addCart(keyboard);
+    addToCart(product);
   };
 
   return (
@@ -34,8 +32,8 @@ const ProductSummary = ({ keyboard }: IKeyboard) => {
         <li>Type: {keyboard?.type}</li>
         <li>Switch: {keyboard?.switch_type}</li>
       </ul>
-      <div className="flex flex-c">
-        <form onSubmit={() => handleSubmit(keyboard)}>
+      <div className="flex items-center">
+        <form>
           <input
             type="number"
             name="quantity"
@@ -43,12 +41,14 @@ const ProductSummary = ({ keyboard }: IKeyboard) => {
             onChange={(e) => setQuantity(Number(e.target.value))}
             className="bg-gray-400 w-10 mr-5"
           />
-          <button 
-            type="submit" // Added type submit for the button
-            className="p-2 bg-white border-2 border-customBlue transition-colors text-customBlue hover:bg-customBlue hover:text-white">
-            Add to cart
-          </button>
         </form>
+        <button
+          onClick={() => handleSubmit(keyboard)}
+          type="submit" // Added type submit for the button
+          className="p-2 bg-white border-2 border-customBlue transition-colors text-customBlue hover:bg-customBlue hover:text-white"
+        >
+          Add to cart
+        </button>
       </div>
     </div>
   );

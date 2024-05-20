@@ -9,6 +9,7 @@ export interface CartContextType {
   setCart: (value: React.SetStateAction<ICart[] | null>) => void;
   lengthOfCart: number | undefined;
   setLengthOfCart: (value: number | undefined) => void;
+  itemIncrementDecrement: (value: string | undefined) => void;
 }
 
 export const CartContext = createContext<CartContextType | undefined>(
@@ -34,7 +35,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
       (p) => p._id === product._id
     );
 
-    // product does not exist insert in to the cart / 
+    // product does not exist insert in to the cart /
     if (existingProduct === -1) {
       const updatedCart = {
         ...cart,
@@ -44,11 +45,10 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
       };
       setCart(updatedCart);
     } else {
-      // if product already exists increment the product quantity 
+      // if product already exists increment the product quantity
       const updatedProducts = [...cart.products];
-      console.log(updatedProducts, "update products for duplicate product");
 
-      console.log(existingProduct, "index");
+      // console.log(existingProduct, "index");
       updatedProducts[existingProduct].quantity += product.quantity;
 
       const updatedCart = {
@@ -59,19 +59,32 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
       };
       setCart(updatedCart);
     }
-   
   };
 
-  console.log(cart);
+  const itemIncrementDecrement = (value: string) => {
+    switch (value) {
+      case "increment":
+        console.log("increment");
+        break;
 
+      case "decrement":
+        console.log("decrement");
+        break;
+
+      default:
+        console.log("break");
+    }
+  };
 
   // if the cart is updated then this will call and update the cart number
   useEffect(() => {
     setLengthOfCart(cart?.products.length);
-  },[cart])
+  }, [cart]);
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, lengthOfCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, lengthOfCart, itemIncrementDecrement }}
+    >
       {children}
     </CartContext.Provider>
   );
